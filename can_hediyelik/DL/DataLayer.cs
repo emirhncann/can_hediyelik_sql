@@ -108,7 +108,7 @@ namespace can_hediyelik.DL
 
                 MySqlCommand komut = new MySqlCommand("can_MusteriGuncelle", conn);
                 komut.CommandType = System.Data.CommandType.StoredProcedure;
-                komut.Parameters.AddWithValue("@p_ID", m.ID);
+                komut.Parameters.AddWithValue("@p_id", m.ID);
                 komut.Parameters.AddWithValue("@p_Ad", m.Ad);
                 komut.Parameters.AddWithValue("@p_Soyad", m.Soyad);
                 komut.Parameters.AddWithValue("@p_Telefon", m.Telefon);
@@ -129,5 +129,35 @@ namespace can_hediyelik.DL
             }
         }
 
+        internal static int MusteriSil(object id)
+        {
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+
+                MySqlCommand komut = new MySqlCommand("can_MusteriSil", conn);
+                komut.CommandType = System.Data.CommandType.StoredProcedure;
+                komut.Parameters.AddWithValue("@id", id);
+               
+
+                int res = komut.ExecuteNonQuery();
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (conn.State != System.Data.ConnectionState.Closed)
+                    conn.Close();
+            }
+        }
+
+        internal static int UrunEkle(object m)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

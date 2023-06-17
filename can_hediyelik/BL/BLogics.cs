@@ -55,5 +55,35 @@ namespace can_hediyelik.BL
 
             }
         }
+
+        internal static bool MusteriSil(string id)
+        {
+            try
+            {
+                int res = DataLayer.MusteriSil(id);
+                return (res > 0); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata Oluştu " + ex.Message);
+                return false;
+
+            }
+        }
+
+        internal static bool UrunEkle(Urun u)
+        {
+            try
+            {
+                int res = DataLayer.UrunEkle(m);
+                return (res > 0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata Oluştu " + ex.Message);
+                return false;
+
+            }
+        }
     }
 }

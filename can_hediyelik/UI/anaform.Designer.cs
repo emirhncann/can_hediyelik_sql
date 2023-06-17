@@ -50,7 +50,6 @@
             toolStripButton4 = new ToolStripButton();
             toolStripTextBox2 = new ToolStripTextBox();
             toolStripLabel2 = new ToolStripLabel();
-            toolStrip2 = new ToolStrip();
             statusStrip1 = new StatusStrip();
             TabPage.SuspendLayout();
             Musteriler.SuspendLayout();
@@ -135,6 +134,7 @@
             btnMusteriSil.Name = "btnMusteriSil";
             btnMusteriSil.Size = new Size(47, 28);
             btnMusteriSil.Text = "Sil";
+            btnMusteriSil.Click += btnMusteriSil_Click;
             // 
             // toolStripSeparator1
             // 
@@ -170,7 +170,6 @@
             // 
             Urunler.Controls.Add(dataGridView2);
             Urunler.Controls.Add(toolStrip3);
-            Urunler.Controls.Add(toolStrip2);
             Urunler.Location = new Point(4, 24);
             Urunler.Name = "Urunler";
             Urunler.Padding = new Padding(3);
@@ -183,17 +182,17 @@
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Dock = DockStyle.Fill;
-            dataGridView2.Location = new Point(3, 59);
+            dataGridView2.Location = new Point(3, 34);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(669, 351);
+            dataGridView2.Size = new Size(669, 376);
             dataGridView2.TabIndex = 2;
             // 
             // toolStrip3
             // 
             toolStrip3.ImageScalingSize = new Size(24, 24);
             toolStrip3.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripButton3, toolStripSeparator2, toolStripButton4, toolStripTextBox2, toolStripLabel2 });
-            toolStrip3.Location = new Point(3, 28);
+            toolStrip3.Location = new Point(3, 3);
             toolStrip3.Name = "toolStrip3";
             toolStrip3.Size = new Size(669, 31);
             toolStrip3.TabIndex = 1;
@@ -206,6 +205,7 @@
             toolStripButton1.Name = "toolStripButton1";
             toolStripButton1.Size = new Size(56, 28);
             toolStripButton1.Text = "Ekle";
+            toolStripButton1.Click += toolStripButton1_Click;
             // 
             // toolStripButton2
             // 
@@ -251,14 +251,6 @@
             toolStripLabel2.Name = "toolStripLabel2";
             toolStripLabel2.Size = new Size(31, 28);
             toolStripLabel2.Text = "Ara :";
-            // 
-            // toolStrip2
-            // 
-            toolStrip2.Location = new Point(3, 3);
-            toolStrip2.Name = "toolStrip2";
-            toolStrip2.Size = new Size(669, 25);
-            toolStrip2.TabIndex = 0;
-            toolStrip2.Text = "toolStrip2";
             // 
             // statusStrip1
             // 

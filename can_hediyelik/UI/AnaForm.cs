@@ -14,7 +14,7 @@ namespace can_hediyelik
         }
 
         public Musteri Musteri { get; set; } = new Musteri();
-        
+
 
         private void btnMusteriEkle_Click(object sender, EventArgs e)
         {
@@ -90,6 +90,62 @@ namespace can_hediyelik
             DataSet ds = BLogics.MusteriGetir("");
             if (ds != null && ds.Tables.Count > 0)
                 dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void btnMusteriSil_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dataGridView1.SelectedRows[0];
+            var ID = row.Cells[0].Value.ToString();
+            var sonuc = MessageBox.Show("Silmek istediðinize emin misiniz?", "Silmeyi Onayla",
+            MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (sonuc == DialogResult.OK)
+            {
+                bool b = BLogics.MusteriSil(ID);
+                if (b)
+                {
+
+                    DataSet ds = BLogics.MusteriGetir("");
+                    if (ds != null && ds.Tables.Count > 0)
+                        dataGridView1.DataSource = ds.Tables[0];
+                }
+
+            }
+
+
+
+            FrmMusteri frmMusteri = new FrmMusteri
+            {
+                Text = "Musteri Güncelle",
+                Guncelleme = true,
+
+            };
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+            FrmUrun frm = new FrmUrun
+            {
+                Text = "Musteri ekle",
+                Urun = new Urun()
+            };
+
+            var sonuc = frm.ShowDialog();
+            if (sonuc == DialogResult.OK)
+            {
+                bool b = BLogics.UrunEkle(frm.Urun);
+
+                if (b)
+                {
+                    DataSet ds = BLogics.UrunleriGetir("");
+                    if (ds != null && ds.Tables.Count > 0)
+                        dataGridView1.DataSource = ds.Tables[0];
+                }
+                else
+                {
+
+                }
+            }
         }
     }
 }
