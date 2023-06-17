@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            btnOk = new Button();
             btnCancel = new Button();
             txtdetay = new TextBox();
             txtUrunDetay = new Label();
@@ -37,25 +36,16 @@
             txtUrunFiyat = new Label();
             txtUrun = new TextBox();
             label2 = new Label();
-            txtID = new TextBox();
+            txtUrunID = new TextBox();
             label1 = new Label();
             nmfiyat = new NumericUpDown();
             nmStok = new NumericUpDown();
             errorProvider1 = new ErrorProvider(components);
+            btgonder = new Button();
             ((System.ComponentModel.ISupportInitialize)nmfiyat).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nmStok).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
-            // 
-            // btnOk
-            // 
-            btnOk.Location = new Point(262, 268);
-            btnOk.Name = "btnOk";
-            btnOk.Size = new Size(75, 23);
-            btnOk.TabIndex = 42;
-            btnOk.Text = "Tamam";
-            btnOk.UseVisualStyleBackColor = true;
-            btnOk.Click += btnOk_Click;
             // 
             // btnCancel
             // 
@@ -118,12 +108,13 @@
             label2.TabIndex = 31;
             label2.Text = "Ad";
             // 
-            // txtID
+            // txtUrunID
             // 
-            txtID.Location = new Point(63, 18);
-            txtID.Name = "txtID";
-            txtID.Size = new Size(274, 23);
-            txtID.TabIndex = 30;
+            txtUrunID.Location = new Point(63, 18);
+            txtUrunID.Name = "txtUrunID";
+            txtUrunID.Size = new Size(274, 23);
+            txtUrunID.TabIndex = 30;
+            txtUrunID.TextChanged += txtID_TextChanged;
             // 
             // label1
             // 
@@ -155,16 +146,25 @@
             // 
             errorProvider1.ContainerControl = this;
             // 
+            // btgonder
+            // 
+            btgonder.Location = new Point(262, 268);
+            btgonder.Name = "btgonder";
+            btgonder.Size = new Size(75, 23);
+            btgonder.TabIndex = 45;
+            btgonder.Text = "Tamam";
+            btgonder.UseVisualStyleBackColor = true;
+            btgonder.Click += btgonder_Click;
+            // 
             // FrmUrun
             // 
-            AcceptButton = btnOk;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnCancel;
             ClientSize = new Size(355, 308);
+            Controls.Add(btgonder);
             Controls.Add(nmStok);
             Controls.Add(nmfiyat);
-            Controls.Add(btnOk);
             Controls.Add(btnCancel);
             Controls.Add(txtdetay);
             Controls.Add(txtUrunDetay);
@@ -172,7 +172,7 @@
             Controls.Add(txtUrunFiyat);
             Controls.Add(txtUrun);
             Controls.Add(label2);
-            Controls.Add(txtID);
+            Controls.Add(txtUrunID);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "FrmUrun";
@@ -186,8 +186,6 @@
         }
 
         #endregion
-
-        private Button btnOk;
         private Button btnCancel;
         private TextBox txtdetay;
         private Label txtUrunDetay;
@@ -195,10 +193,11 @@
         private Label txtUrunFiyat;
         private TextBox txtUrun;
         private Label label2;
-        private TextBox txtID;
+        private TextBox txtUrunID;
         private Label label1;
         private NumericUpDown nmfiyat;
         private NumericUpDown nmStok;
         private ErrorProvider errorProvider1;
+        private Button btgonder;
     }
 }

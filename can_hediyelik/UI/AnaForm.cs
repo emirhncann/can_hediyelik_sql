@@ -91,9 +91,10 @@ namespace can_hediyelik
             if (ds1 != null && ds1.Tables.Count > 0)
                 dataGridView1.DataSource = ds1.Tables[0];
 
-            DataSet ds2 = BLogics.UrunGetir("");
-            if (ds2 != null && ds2.Tables.Count > 0)
-                dataGridView1.DataSource = ds2.Tables[0];
+             DataSet ds2 = BLogics.UrunGetir("");
+             if (ds2 != null && ds2.Tables.Count > 0)
+                 dataGridView2.DataSource = ds2.Tables[0];
+         
         }
 
         private void btnMusteriSil_Click(object sender, EventArgs e)
@@ -143,13 +144,33 @@ namespace can_hediyelik
                 {
                     DataSet ds = BLogics.UrunGetir("");
                     if (ds != null && ds.Tables.Count > 0)
-                        dataGridView1.DataSource = ds.Tables[0];
+                        dataGridView2.DataSource = ds.Tables[0];
                 }
                 else
                 {
 
                 }
             }
+        }
+
+        private void toolStrip3_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -165,12 +165,12 @@ namespace can_hediyelik.DL
 
                 MySqlCommand komut = new MySqlCommand("can_UrunEkle", conn);
                 komut.CommandType = System.Data.CommandType.StoredProcedure;
-                komut.Parameters.AddWithValue("@id", u.ID);
-                komut.Parameters.AddWithValue("@ad", u.Ad);
-                komut.Parameters.AddWithValue("@fiyat", u.Fiyat);
-                komut.Parameters.AddWithValue("@stok", u.Stok);
-                komut.Parameters.AddWithValue("@detay", u.Detay);
-                
+                komut.Parameters.AddWithValue("@u_id", u.ID);
+                komut.Parameters.AddWithValue("@u_ad", u.Ad);
+                komut.Parameters.AddWithValue("@u_fiyat", u.Fiyat);
+                komut.Parameters.AddWithValue("@u_stok", u.Stok);
+                komut.Parameters.AddWithValue("@u_detay", u.Detay);
+
 
                 int res = komut.ExecuteNonQuery();
                 return res;
@@ -190,7 +190,7 @@ namespace can_hediyelik.DL
             }
         }
 
-        internal static DataSet UrunGetir(string filtre)
+        internal static DataSet UrunGetir(string u)
         {
             try
             {
@@ -199,7 +199,7 @@ namespace can_hediyelik.DL
                     conn.Open();
 
                 MySqlCommand komut;
-                if (string.IsNullOrEmpty(filtre))
+                if (string.IsNullOrEmpty(u))
                 {
                     komut = new MySqlCommand("can_UrunlerHepsi", conn);
                     komut.CommandType = System.Data.CommandType.StoredProcedure;
@@ -209,7 +209,7 @@ namespace can_hediyelik.DL
                 {
                     komut = new MySqlCommand("can_UrunBul", conn);
                     komut.CommandType = System.Data.CommandType.StoredProcedure;
-                    komut.Parameters.AddWithValue("@filtre", filtre);
+                    komut.Parameters.AddWithValue("@filtre", u);
                 }
                 DataSet dataSet = new DataSet();
                 MySqlDataAdapter adp = new MySqlDataAdapter(komut);

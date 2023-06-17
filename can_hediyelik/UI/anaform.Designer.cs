@@ -98,6 +98,7 @@
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(669, 376);
             dataGridView1.TabIndex = 1;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // toolStrip1
             // 
@@ -108,6 +109,7 @@
             toolStrip1.Size = new Size(669, 31);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
+            toolStrip1.ItemClicked += toolStrip1_ItemClicked;
             // 
             // btnMusteriEkle
             // 
@@ -187,6 +189,7 @@
             dataGridView2.RowTemplate.Height = 25;
             dataGridView2.Size = new Size(669, 376);
             dataGridView2.TabIndex = 2;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
             // toolStrip3
             // 
@@ -197,6 +200,7 @@
             toolStrip3.Size = new Size(669, 31);
             toolStrip3.TabIndex = 1;
             toolStrip3.Text = "toolStrip3";
+            toolStrip3.ItemClicked += toolStrip3_ItemClicked;
             // 
             // toolStripButton1
             // 

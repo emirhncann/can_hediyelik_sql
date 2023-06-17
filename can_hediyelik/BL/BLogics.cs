@@ -86,7 +86,7 @@ namespace can_hediyelik.BL
             }
         }
 
-        internal static DataSet UrunGetir(string v)
+        internal static DataSet UrunGetir(string u)
         {
             try
             {
@@ -99,6 +99,6 @@ namespace can_hediyelik.BL
                 return null;
 
             }
-        }
+      }
     }
 }
