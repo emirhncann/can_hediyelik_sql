@@ -155,9 +155,81 @@ namespace can_hediyelik.DL
             }
         }
 
-        internal static int UrunEkle(object m)
+        internal static int UrunEkle(Urun u)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+
+                    conn.Open();
+
+                MySqlCommand komut = new MySqlCommand("can_UrunEkle", conn);
+                komut.CommandType = System.Data.CommandType.StoredProcedure;
+                komut.Parameters.AddWithValue("@id", u.ID);
+                komut.Parameters.AddWithValue("@ad", u.Ad);
+                komut.Parameters.AddWithValue("@fiyat", u.Fiyat);
+                komut.Parameters.AddWithValue("@stok", u.Stok);
+                komut.Parameters.AddWithValue("@detay", u.Detay);
+                
+
+                int res = komut.ExecuteNonQuery();
+                return res;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+
+            }
+            finally
+            {
+                if (conn.State != System.Data.ConnectionState.Closed)
+                    conn.Close();
+
+            }
+        }
+
+        internal static DataSet UrunGetir(string filtre)
+        {
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+
+                    conn.Open();
+
+                MySqlCommand komut;
+                if (string.IsNullOrEmpty(filtre))
+                {
+                    komut = new MySqlCommand("can_UrunlerHepsi", conn);
+                    komut.CommandType = System.Data.CommandType.StoredProcedure;
+
+                }
+                else
+                {
+                    komut = new MySqlCommand("can_UrunBul", conn);
+                    komut.CommandType = System.Data.CommandType.StoredProcedure;
+                    komut.Parameters.AddWithValue("@filtre", filtre);
+                }
+                DataSet dataSet = new DataSet();
+                MySqlDataAdapter adp = new MySqlDataAdapter(komut);
+                adp.Fill(dataSet);
+                return dataSet;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+
+            }
+            finally
+            {
+                if (conn.State != System.Data.ConnectionState.Closed)
+                    conn.Close();
+
+            }
         }
     }
 }

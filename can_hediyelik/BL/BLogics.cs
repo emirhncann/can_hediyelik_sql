@@ -75,13 +75,28 @@ namespace can_hediyelik.BL
         {
             try
             {
-                int res = DataLayer.UrunEkle(m);
+                int res = DataLayer.UrunEkle(u);
                 return (res > 0);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Hata Oluştu " + ex.Message);
                 return false;
+
+            }
+        }
+
+        internal static DataSet UrunGetir(string v)
+        {
+            try
+            {
+                DataSet ds = DataLayer.UrunGetir("");
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata Oluştu " + ex.Message);
+                return null;
 
             }
         }

@@ -16,7 +16,7 @@ namespace can_hediyelik.UI
         {
             InitializeComponent();
         }
-       public Urun Urun { get; set; }
+        public Urun Urun { get; set; }
         private void btnOk_Click(object sender, EventArgs e)
         {
 

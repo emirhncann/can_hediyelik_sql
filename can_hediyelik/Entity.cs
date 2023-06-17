@@ -24,7 +24,7 @@ namespace can_hediyelik
 
     public class Urun
     {
-        public Guid ID { get; set; }
+        public string ID { get; set; }
         public string Ad { get; set; }
         public double Fiyat { get; set; }
         public double Stok { get; set; }

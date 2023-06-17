@@ -87,9 +87,13 @@ namespace can_hediyelik
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            DataSet ds = BLogics.MusteriGetir("");
-            if (ds != null && ds.Tables.Count > 0)
-                dataGridView1.DataSource = ds.Tables[0];
+            DataSet ds1 = BLogics.MusteriGetir("");
+            if (ds1 != null && ds1.Tables.Count > 0)
+                dataGridView1.DataSource = ds1.Tables[0];
+
+            DataSet ds2 = BLogics.UrunGetir("");
+            if (ds2 != null && ds2.Tables.Count > 0)
+                dataGridView1.DataSource = ds2.Tables[0];
         }
 
         private void btnMusteriSil_Click(object sender, EventArgs e)
@@ -126,7 +130,7 @@ namespace can_hediyelik
 
             FrmUrun frm = new FrmUrun
             {
-                Text = "Musteri ekle",
+                Text = "Urun ekle",
                 Urun = new Urun()
             };
 
@@ -137,7 +141,7 @@ namespace can_hediyelik
 
                 if (b)
                 {
-                    DataSet ds = BLogics.UrunleriGetir("");
+                    DataSet ds = BLogics.UrunGetir("");
                     if (ds != null && ds.Tables.Count > 0)
                         dataGridView1.DataSource = ds.Tables[0];
                 }
