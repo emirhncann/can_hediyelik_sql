@@ -18,6 +18,8 @@ namespace can_hediyelik.UI
             Urun = new Urun();
         }
         public Urun Urun { get; set; }
+        public bool Guncelleme { get; internal set; }
+
         private void btnOk1_Click(object sender, EventArgs e)
         {
 

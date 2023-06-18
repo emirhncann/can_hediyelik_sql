@@ -91,10 +91,10 @@ namespace can_hediyelik
             if (ds1 != null && ds1.Tables.Count > 0)
                 dataGridView1.DataSource = ds1.Tables[0];
 
-             DataSet ds2 = BLogics.UrunGetir("");
-             if (ds2 != null && ds2.Tables.Count > 0)
-                 dataGridView2.DataSource = ds2.Tables[0];
-         
+            DataSet ds2 = BLogics.UrunGetir("");
+            if (ds2 != null && ds2.Tables.Count > 0)
+                dataGridView2.DataSource = ds2.Tables[0];
+
         }
 
         private void btnMusteriSil_Click(object sender, EventArgs e)
@@ -171,6 +171,42 @@ namespace can_hediyelik
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dataGridView2.SelectedRows[0];
+            FrmUrun frm = new FrmUrun
+            {
+                Text = "Urun Güncelle",
+                Guncelleme = true,
+                Urun = new Urun()
+                {
+                    ID = row.Cells[0].Value.ToString(),
+
+                    Ad = row.Cells[1].Value.ToString(),
+                    Fiyat = (double)row.Cells[2].Value,
+                    Stok = (double)row.Cells[3].Value,
+                    Detay = row.Cells[4].Value.ToString(),
+                    
+                }
+            };
+            var sonuc = frm.ShowDialog();
+            if (sonuc == DialogResult.OK)
+            {
+                bool b = BLogics.UrunGuncelle(frm.Urun);
+
+                if (b)
+                {
+                    DataSet ds = BLogics.UrunGetir("");
+                    if (ds != null && ds.Tables.Count > 0)
+                        dataGridView2.DataSource = ds.Tables[0];
+                }
+                else
+                {
+
+                }
+            }
         }
     }
 }

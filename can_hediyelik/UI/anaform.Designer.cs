@@ -218,6 +218,7 @@
             toolStripButton2.Name = "toolStripButton2";
             toolStripButton2.Size = new Size(77, 28);
             toolStripButton2.Text = "Düzenle";
+            toolStripButton2.Click += toolStripButton2_Click;
             // 
             // toolStripButton3
             // 

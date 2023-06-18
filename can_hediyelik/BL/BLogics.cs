@@ -100,5 +100,20 @@ namespace can_hediyelik.BL
 
             }
       }
+
+        internal static bool UrunGuncelle(Urun u)
+        {
+            try
+            {
+                int res = DataLayer.UrunGuncelle(u);
+                return (res > 0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata Oluştu " + ex.Message);
+                return false;
+
+            }
+        }
     }
 }

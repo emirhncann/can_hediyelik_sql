@@ -231,5 +231,34 @@ namespace can_hediyelik.DL
 
             }
         }
+
+        internal static int UrunGuncelle(Urun u)
+        {
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+
+                MySqlCommand komut = new MySqlCommand("can_UrunEkle", conn);
+                komut.CommandType = System.Data.CommandType.StoredProcedure;
+                komut.Parameters.AddWithValue("@u_id", u.ID);
+                komut.Parameters.AddWithValue("@u_ad", u.Ad);
+                komut.Parameters.AddWithValue("@u_fiyat", u.Fiyat);
+                komut.Parameters.AddWithValue("@u_stok", u.Stok);
+                komut.Parameters.AddWithValue("@u_detay", u.Detay);
+
+                int res = komut.ExecuteNonQuery();
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (conn.State != System.Data.ConnectionState.Closed)
+                    conn.Close();
+            }
+        }
     }
 }
