@@ -1,6 +1,6 @@
 ﻿namespace can_hediyelik.UI
 {
-    partial class Müsteriler
+    partial class Müşteriler
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Müsteriler));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Müşteriler));
             Musteriler = new TabPage();
             btnOk = new Button();
             btnCancel = new Button();
@@ -177,7 +177,7 @@
             TabPage.Size = new Size(669, 373);
             TabPage.TabIndex = 1;
             // 
-            // Müsteriler
+            // Müşteriler
             // 
             AcceptButton = btnOk;
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -185,7 +185,7 @@
             CancelButton = btnCancel;
             ClientSize = new Size(669, 373);
             Controls.Add(TabPage);
-            Name = "Müsteriler";
+            Name = "Müşteriler";
             Text = "Müsteriler";
             Load += Müsteriler_Load;
             Musteriler.ResumeLayout(false);

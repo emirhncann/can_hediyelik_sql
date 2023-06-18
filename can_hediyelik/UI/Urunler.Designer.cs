@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Urunler));
             Ürünler = new TabControl();
             tabPage1 = new TabPage();
+            btnOk = new Button();
+            btnCancel = new Button();
             dataGridView2 = new DataGridView();
             toolStrip3 = new ToolStrip();
             toolStripButton1 = new ToolStripButton();
@@ -53,30 +55,54 @@
             Ürünler.Location = new Point(0, 0);
             Ürünler.Name = "Ürünler";
             Ürünler.SelectedIndex = 0;
-            Ürünler.Size = new Size(800, 450);
+            Ürünler.Size = new Size(635, 360);
             Ürünler.TabIndex = 1;
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(btnOk);
+            tabPage1.Controls.Add(btnCancel);
             tabPage1.Controls.Add(dataGridView2);
             tabPage1.Controls.Add(toolStrip3);
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(792, 422);
+            tabPage1.Size = new Size(627, 332);
             tabPage1.TabIndex = 1;
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnOk
+            // 
+            btnOk.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnOk.Location = new Point(548, 301);
+            btnOk.Name = "btnOk";
+            btnOk.Size = new Size(71, 23);
+            btnOk.TabIndex = 58;
+            btnOk.Text = "Tamam";
+            btnOk.UseVisualStyleBackColor = true;
+            btnOk.Click += btnOk_Click;
+            // 
+            // btnCancel
+            // 
+            btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnCancel.Location = new Point(467, 301);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(71, 23);
+            btnCancel.TabIndex = 57;
+            btnCancel.Text = "İptal";
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
+            // 
             // dataGridView2
             // 
+            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Dock = DockStyle.Fill;
-            dataGridView2.Location = new Point(3, 34);
+            dataGridView2.Location = new Point(-4, 37);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowTemplate.Height = 25;
             dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView2.Size = new Size(786, 385);
+            dataGridView2.Size = new Size(831, 255);
             dataGridView2.TabIndex = 2;
             // 
             // toolStrip3
@@ -85,7 +111,7 @@
             toolStrip3.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripButton3, toolStripSeparator2, toolStripButton4, toolStripTextBox2, toolStripLabel2 });
             toolStrip3.Location = new Point(3, 3);
             toolStrip3.Name = "toolStrip3";
-            toolStrip3.Size = new Size(786, 31);
+            toolStrip3.Size = new Size(621, 31);
             toolStrip3.TabIndex = 1;
             toolStrip3.Text = "toolStrip3";
             // 
@@ -96,6 +122,7 @@
             toolStripButton1.Name = "toolStripButton1";
             toolStripButton1.Size = new Size(56, 28);
             toolStripButton1.Text = "Ekle";
+            toolStripButton1.Click += toolStripButton1_Click;
             // 
             // toolStripButton2
             // 
@@ -146,9 +173,11 @@
             // 
             // Urunler
             // 
+            AcceptButton = btnOk;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            CancelButton = btnCancel;
+            ClientSize = new Size(635, 360);
             Controls.Add(Ürünler);
             Name = "Urunler";
             Text = "Urunler";
@@ -175,5 +204,7 @@
         private ToolStripButton toolStripButton4;
         private ToolStripTextBox toolStripTextBox2;
         private ToolStripLabel toolStripLabel2;
+        private Button btnOk;
+        private Button btnCancel;
     }
 }

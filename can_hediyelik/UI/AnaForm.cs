@@ -28,7 +28,7 @@ namespace can_hediyelik
 
         private void btnMusteriler_ButtonClick(object sender, EventArgs e)
         {
-            new Müsteriler().ShowDialog();
+            new Müþteriler().ShowDialog();
         }
 
         private void toolStripSplitButton3_ButtonClick(object sender, EventArgs e)
@@ -40,12 +40,33 @@ namespace can_hediyelik
         {
             FrmSatis frm = new FrmSatis()
             {
-                Text = "Satýþ"
+                Text = "Satýþ",
+                Satis = new Satis()
+                {
+                    ID = Guid.NewGuid(),
+
+                }
+
             };
 
             if(frm.ShowDialog() == DialogResult.OK)
             {
+                var sonuc = frm.ShowDialog();
+                if (sonuc == DialogResult.OK)
+                {
+                    bool b = BLogics.SatisEkle(frm.Satis);
+/*
+                    if (b)
+                    {
+                        DataSet ds = BLogics.MusteriGetir("");
+                        if (ds != null && ds.Tables.Count > 0)
+                            dataGridView2.DataSource = ds.Tables[0];
+                    }
+                    else
+                    {
 
+                    }
+  */              }
             }
 
         }

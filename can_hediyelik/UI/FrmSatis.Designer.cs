@@ -107,6 +107,7 @@
             // 
             txtMusteri.Location = new Point(62, 42);
             txtMusteri.Name = "txtMusteri";
+            txtMusteri.ReadOnly = true;
             txtMusteri.Size = new Size(193, 23);
             txtMusteri.TabIndex = 48;
             // 
@@ -140,6 +141,7 @@
             // 
             textBox1.Location = new Point(62, 71);
             textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
             textBox1.Size = new Size(193, 23);
             textBox1.TabIndex = 56;
             // 
@@ -172,6 +174,7 @@
             button2.TabIndex = 59;
             button2.Text = "Ürün Seç";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // FrmSatis
             // 

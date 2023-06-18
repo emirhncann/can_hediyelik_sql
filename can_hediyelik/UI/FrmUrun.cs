@@ -16,11 +16,11 @@ namespace can_hediyelik.UI
         public FrmUrun()
         {
             InitializeComponent();
-            Urun = new Urun();
+            urun = new Urun();
         }
-        public Urun Urun { get; set; }
-        public bool güncelleme { get; set; } = false;
-        public bool Guncelleme { get; internal set; }
+        public Urun urun = new Urun();  
+        
+        public bool Guncelleme { get; internal set; } = false;  
 
         private void btnOk1_Click(object sender, EventArgs e)
         {
@@ -43,12 +43,12 @@ namespace can_hediyelik.UI
         {
 
 
-            Urun.ID = txtUrunID.Text;
-            Urun.Ad = txtUrun.Text;
-            Urun.Fiyat = (double)nmfiyat.Value;
-            Urun.Stok = (double)nmStok.Value;
-            Urun.Ad = txtUrun.Text;
-            Urun.Detay = txtdetay.Text;
+            urun.ID = txtUrunID.Text;
+            urun.Ad = txtUrun.Text;
+            urun.Fiyat = (double)nmfiyat.Value;
+            urun.Stok = (double)nmStok.Value;
+            urun.Ad = txtUrun.Text;
+            urun.Detay = txtdetay.Text;
 
             DialogResult = DialogResult.OK;
 
@@ -61,12 +61,12 @@ namespace can_hediyelik.UI
             
             if (Guncelleme)
             {
-                txtUrunID.Text = Urun.ID;
-                txtUrun.Text = Urun.Ad;
-                nmfiyat.Value = (decimal)Urun.Fiyat;
-                nmStok.Value= (decimal)Urun.Stok;
-                txtdetay.Text = Urun.Detay;
-                
+                txtUrunID.Text = urun.ID;
+                txtUrun.Text = urun.Ad.ToString();
+                nmfiyat.Value = (decimal)urun.Fiyat;
+                txtdetay.Text = urun.Detay;
+                nmStok.Value = (decimal)urun.Stok;
+
             }
         }
     }

@@ -15,6 +15,7 @@ namespace can_hediyelik
         public string Telefon { get; set; }
         public string Mail { get; set; }
         public string Adres { get; set; }
+       
 
         public override string ToString()
         {
@@ -40,7 +41,7 @@ namespace can_hediyelik
     {
         public Guid ID { get; set; }
         public Musteri Musteri { get; set; }
-        public Urun Urun { get; set; }
+        public Urun urun { get; set; }
         public DateTime Tarih { get; set; }
         public double Fiyat { get; set; }
     }

@@ -155,6 +155,41 @@ namespace can_hediyelik.DL
             }
         }
 
+        internal static int SatisEkle(Satis s)
+        {
+             try
+           {
+                if (conn.State != System.Data.ConnectionState.Open)
+
+                    conn.Open();
+
+                MySqlCommand komut = new MySqlCommand("can_SatisEkle", conn);
+                komut.CommandType = System.Data.CommandType.StoredProcedure;
+                komut.Parameters.AddWithValue("@sid", s.ID);
+                komut.Parameters.AddWithValue("mid", s.Musteri.ID);
+                komut.Parameters.AddWithValue("@uid", s.urun.ID);
+                komut.Parameters.AddWithValue("@tarih", s.Tarih);
+                komut.Parameters.AddWithValue("@fiyat", s.Fiyat);
+
+
+                int res = komut.ExecuteNonQuery();
+                return res;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+
+            }
+            finally
+            {
+                if (conn.State != System.Data.ConnectionState.Closed)
+                    conn.Close();
+
+            }
+        }
+
         internal static int UrunEkle(Urun u)
         {
             try
@@ -168,8 +203,9 @@ namespace can_hediyelik.DL
                 komut.Parameters.AddWithValue("@u_id", u.ID);
                 komut.Parameters.AddWithValue("@u_ad", u.Ad);
                 komut.Parameters.AddWithValue("@u_fiyat", u.Fiyat);
-                komut.Parameters.AddWithValue("@u_stok", u.Stok);
                 komut.Parameters.AddWithValue("@u_detay", u.Detay);
+                komut.Parameters.AddWithValue("@u_stok", u.Stok);
+                
 
 
                 int res = komut.ExecuteNonQuery();
@@ -239,7 +275,7 @@ namespace can_hediyelik.DL
                 if (conn.State != System.Data.ConnectionState.Open)
                     conn.Open();
 
-                MySqlCommand komut = new MySqlCommand("can_UrunEkle", conn);
+                MySqlCommand komut = new MySqlCommand("can_UrunGuncelle", conn);
                 komut.CommandType = System.Data.CommandType.StoredProcedure;
                 komut.Parameters.AddWithValue("@u_id", u.ID);
                 komut.Parameters.AddWithValue("@u_ad", u.Ad);

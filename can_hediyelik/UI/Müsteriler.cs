@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace can_hediyelik.UI
 {
-    public partial class Müsteriler : Form
+    public partial class Müşteriler : Form
     {
-        public Müsteriler()
+        public Müşteriler()
         {
             InitializeComponent();
         }
@@ -33,7 +33,7 @@ namespace can_hediyelik.UI
                 Text = "Musteri ekle",
                 Musteri = new Musteri()
             };
-
+        
             var sonuc = frmMusteri.ShowDialog();
             if (sonuc == DialogResult.OK)
             {
@@ -126,7 +126,7 @@ namespace can_hediyelik.UI
         private void btnOk_Click(object sender, EventArgs e)
         {
             DataGridViewRow row = dataGridView1.SelectedRows[0];
-            FrmMusteri frmMusteri = new FrmMusteri
+            FrmMusteri frmMusteri = new FrmMusteri()
             {
 
                 Musteri = new Musteri()
