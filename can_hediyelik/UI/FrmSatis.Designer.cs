@@ -42,6 +42,8 @@
             textBox1 = new TextBox();
             dtTarih = new DateTimePicker();
             errorProvider1 = new ErrorProvider(components);
+            button1 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)nmFiyat).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
@@ -152,13 +154,34 @@
             // 
             errorProvider1.ContainerControl = this;
             // 
+            // button1
+            // 
+            button1.Location = new Point(261, 42);
+            button1.Name = "button1";
+            button1.Size = new Size(100, 23);
+            button1.TabIndex = 58;
+            button1.Text = "Müşteri Seç";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(261, 71);
+            button2.Name = "button2";
+            button2.Size = new Size(100, 23);
+            button2.TabIndex = 59;
+            button2.Text = "Ürün Seç";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // FrmSatis
             // 
             AcceptButton = btnOk;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnCancel;
-            ClientSize = new Size(268, 214);
+            ClientSize = new Size(389, 214);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(dtTarih);
             Controls.Add(textBox1);
             Controls.Add(nmFiyat);
@@ -196,5 +219,7 @@
         private TextBox textBox1;
         private DateTimePicker dtTarih;
         private ErrorProvider errorProvider1;
+        private Button button2;
+        private Button button1;
     }
 }

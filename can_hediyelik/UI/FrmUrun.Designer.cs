@@ -178,6 +178,7 @@
             Name = "FrmUrun";
             StartPosition = FormStartPosition.CenterParent;
             Text = "FrmUrun";
+            Load += FrmUrun_Load;
             ((System.ComponentModel.ISupportInitialize)nmfiyat).EndInit();
             ((System.ComponentModel.ISupportInitialize)nmStok).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();

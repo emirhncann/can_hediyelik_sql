@@ -260,5 +260,31 @@ namespace can_hediyelik.DL
                     conn.Close();
             }
         }
+
+        internal static int UrunSil(object id)
+        {
+            try
+            {
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+
+                MySqlCommand komut = new MySqlCommand("can_UrunSil", conn);
+                komut.CommandType = System.Data.CommandType.StoredProcedure;
+                komut.Parameters.AddWithValue("@id", id);
+
+
+                int res = komut.ExecuteNonQuery();
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (conn.State != System.Data.ConnectionState.Closed)
+                    conn.Close();
+            }
+        }
     }
 }

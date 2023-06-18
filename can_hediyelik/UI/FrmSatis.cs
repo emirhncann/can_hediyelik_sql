@@ -44,9 +44,14 @@ namespace can_hediyelik.UI
 
         private void FrmSatis_Load(object sender, EventArgs e)
         {
-            txtID.Text = Satis.ID.ToString();
-            txtMusteri.Text = Musteri.ToString();
-            txtUrunDetay.Text = Urun.ToString();
+            //txtID.Text = Satis.ID.ToString();
+            //txtMusteri.Text = Musteri.ToString();
+            //txtUrunDetay.Text = Urun.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

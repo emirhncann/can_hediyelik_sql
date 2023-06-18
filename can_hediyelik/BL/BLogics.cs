@@ -115,5 +115,20 @@ namespace can_hediyelik.BL
 
             }
         }
+
+        internal static bool UrunSil(string ıD)
+        {
+            try
+            {
+                int res = DataLayer.UrunSil(ıD);
+                return (res > 0);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata Oluştu " + ex.Message);
+                return false;
+
+            }
+        }
     }
 }

@@ -28,234 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            TabPage = new TabControl();
-            Musteriler = new TabPage();
-            dataGridView1 = new DataGridView();
-            toolStrip1 = new ToolStrip();
-            btnMusteriEkle = new ToolStripButton();
-            btnMusteriDuzenle = new ToolStripButton();
-            btnMusteriSil = new ToolStripButton();
-            toolStripSeparator1 = new ToolStripSeparator();
-            btnMusteriBul = new ToolStripButton();
-            toolStripTextBox1 = new ToolStripTextBox();
-            toolStripLabel1 = new ToolStripLabel();
-            Urunler = new TabPage();
-            dataGridView2 = new DataGridView();
-            toolStrip3 = new ToolStrip();
-            toolStripButton1 = new ToolStripButton();
-            toolStripButton2 = new ToolStripButton();
-            toolStripButton3 = new ToolStripButton();
-            toolStripSeparator2 = new ToolStripSeparator();
-            toolStripButton4 = new ToolStripButton();
-            toolStripTextBox2 = new ToolStripTextBox();
-            toolStripLabel2 = new ToolStripLabel();
             statusStrip1 = new StatusStrip();
-            TabPage.SuspendLayout();
-            Musteriler.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ımageList1 = new ImageList(components);
+            toolStrip1 = new ToolStrip();
+            toolStripSplitButton1 = new ToolStripSplitButton();
+            toolStripSeparator6 = new ToolStripSeparator();
+            toolStripSeparator5 = new ToolStripSeparator();
+            toolStripSeparator3 = new ToolStripSeparator();
+            btnMusteriler = new ToolStripSplitButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            toolStripSplitButton3 = new ToolStripSplitButton();
+            toolStripSeparator2 = new ToolStripSeparator();
+            toolStripSplitButton4 = new ToolStripSplitButton();
+            toolStripSeparator4 = new ToolStripSeparator();
+            toolStripSplitButton5 = new ToolStripSplitButton();
             toolStrip1.SuspendLayout();
-            Urunler.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            toolStrip3.SuspendLayout();
             SuspendLayout();
-            // 
-            // TabPage
-            // 
-            TabPage.Controls.Add(Musteriler);
-            TabPage.Controls.Add(Urunler);
-            TabPage.Dock = DockStyle.Fill;
-            TabPage.Location = new Point(0, 0);
-            TabPage.Name = "TabPage";
-            TabPage.SelectedIndex = 0;
-            TabPage.Size = new Size(683, 441);
-            TabPage.TabIndex = 0;
-            // 
-            // Musteriler
-            // 
-            Musteriler.Controls.Add(dataGridView1);
-            Musteriler.Controls.Add(toolStrip1);
-            Musteriler.Location = new Point(4, 24);
-            Musteriler.Name = "Musteriler";
-            Musteriler.Padding = new Padding(3);
-            Musteriler.Size = new Size(675, 413);
-            Musteriler.TabIndex = 0;
-            Musteriler.Text = "Musteriler";
-            Musteriler.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dataGridView1.Location = new Point(3, 34);
-            dataGridView1.MultiSelect = false;
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(669, 376);
-            dataGridView1.TabIndex = 1;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // toolStrip1
-            // 
-            toolStrip1.ImageScalingSize = new Size(24, 24);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnMusteriEkle, btnMusteriDuzenle, btnMusteriSil, toolStripSeparator1, btnMusteriBul, toolStripTextBox1, toolStripLabel1 });
-            toolStrip1.Location = new Point(3, 3);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(669, 31);
-            toolStrip1.TabIndex = 0;
-            toolStrip1.Text = "toolStrip1";
-            toolStrip1.ItemClicked += toolStrip1_ItemClicked;
-            // 
-            // btnMusteriEkle
-            // 
-            btnMusteriEkle.Image = (Image)resources.GetObject("btnMusteriEkle.Image");
-            btnMusteriEkle.ImageTransparentColor = Color.Magenta;
-            btnMusteriEkle.Name = "btnMusteriEkle";
-            btnMusteriEkle.Size = new Size(56, 28);
-            btnMusteriEkle.Text = "Ekle";
-            btnMusteriEkle.Click += btnMusteriEkle_Click;
-            // 
-            // btnMusteriDuzenle
-            // 
-            btnMusteriDuzenle.Image = (Image)resources.GetObject("btnMusteriDuzenle.Image");
-            btnMusteriDuzenle.ImageTransparentColor = Color.Magenta;
-            btnMusteriDuzenle.Name = "btnMusteriDuzenle";
-            btnMusteriDuzenle.Size = new Size(77, 28);
-            btnMusteriDuzenle.Text = "Düzenle";
-            btnMusteriDuzenle.Click += btnMusteriDuzenle_Click;
-            // 
-            // btnMusteriSil
-            // 
-            btnMusteriSil.Image = (Image)resources.GetObject("btnMusteriSil.Image");
-            btnMusteriSil.ImageTransparentColor = Color.Magenta;
-            btnMusteriSil.Name = "btnMusteriSil";
-            btnMusteriSil.Size = new Size(47, 28);
-            btnMusteriSil.Text = "Sil";
-            btnMusteriSil.Click += btnMusteriSil_Click;
-            // 
-            // toolStripSeparator1
-            // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 31);
-            // 
-            // btnMusteriBul
-            // 
-            btnMusteriBul.Alignment = ToolStripItemAlignment.Right;
-            btnMusteriBul.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            btnMusteriBul.Image = (Image)resources.GetObject("btnMusteriBul.Image");
-            btnMusteriBul.ImageTransparentColor = Color.Magenta;
-            btnMusteriBul.Name = "btnMusteriBul";
-            btnMusteriBul.Size = new Size(28, 28);
-            btnMusteriBul.Text = "toolStripButton1";
-            btnMusteriBul.Click += btnMusteriBul_Click;
-            // 
-            // toolStripTextBox1
-            // 
-            toolStripTextBox1.Alignment = ToolStripItemAlignment.Right;
-            toolStripTextBox1.BorderStyle = BorderStyle.FixedSingle;
-            toolStripTextBox1.Name = "toolStripTextBox1";
-            toolStripTextBox1.Size = new Size(100, 31);
-            // 
-            // toolStripLabel1
-            // 
-            toolStripLabel1.Alignment = ToolStripItemAlignment.Right;
-            toolStripLabel1.Name = "toolStripLabel1";
-            toolStripLabel1.Size = new Size(31, 28);
-            toolStripLabel1.Text = "Ara :";
-            // 
-            // Urunler
-            // 
-            Urunler.Controls.Add(dataGridView2);
-            Urunler.Controls.Add(toolStrip3);
-            Urunler.Location = new Point(4, 24);
-            Urunler.Name = "Urunler";
-            Urunler.Padding = new Padding(3);
-            Urunler.Size = new Size(675, 413);
-            Urunler.TabIndex = 1;
-            Urunler.Text = "Urunler";
-            Urunler.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Dock = DockStyle.Fill;
-            dataGridView2.Location = new Point(3, 34);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(669, 376);
-            dataGridView2.TabIndex = 2;
-            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
-            // 
-            // toolStrip3
-            // 
-            toolStrip3.ImageScalingSize = new Size(24, 24);
-            toolStrip3.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripButton3, toolStripSeparator2, toolStripButton4, toolStripTextBox2, toolStripLabel2 });
-            toolStrip3.Location = new Point(3, 3);
-            toolStrip3.Name = "toolStrip3";
-            toolStrip3.Size = new Size(669, 31);
-            toolStrip3.TabIndex = 1;
-            toolStrip3.Text = "toolStrip3";
-            toolStrip3.ItemClicked += toolStrip3_ItemClicked;
-            // 
-            // toolStripButton1
-            // 
-            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(56, 28);
-            toolStripButton1.Text = "Ekle";
-            toolStripButton1.Click += toolStripButton1_Click;
-            // 
-            // toolStripButton2
-            // 
-            toolStripButton2.Image = (Image)resources.GetObject("toolStripButton2.Image");
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(77, 28);
-            toolStripButton2.Text = "Düzenle";
-            toolStripButton2.Click += toolStripButton2_Click;
-            // 
-            // toolStripButton3
-            // 
-            toolStripButton3.Image = (Image)resources.GetObject("toolStripButton3.Image");
-            toolStripButton3.ImageTransparentColor = Color.Magenta;
-            toolStripButton3.Name = "toolStripButton3";
-            toolStripButton3.Size = new Size(47, 28);
-            toolStripButton3.Text = "Sil";
-            // 
-            // toolStripSeparator2
-            // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 31);
-            // 
-            // toolStripButton4
-            // 
-            toolStripButton4.Alignment = ToolStripItemAlignment.Right;
-            toolStripButton4.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton4.Image = (Image)resources.GetObject("toolStripButton4.Image");
-            toolStripButton4.ImageTransparentColor = Color.Magenta;
-            toolStripButton4.Name = "toolStripButton4";
-            toolStripButton4.Size = new Size(28, 28);
-            toolStripButton4.Text = "toolStripButton1";
-            // 
-            // toolStripTextBox2
-            // 
-            toolStripTextBox2.Alignment = ToolStripItemAlignment.Right;
-            toolStripTextBox2.BorderStyle = BorderStyle.FixedSingle;
-            toolStripTextBox2.Name = "toolStripTextBox2";
-            toolStripTextBox2.Size = new Size(100, 31);
-            // 
-            // toolStripLabel2
-            // 
-            toolStripLabel2.Alignment = ToolStripItemAlignment.Right;
-            toolStripLabel2.Name = "toolStripLabel2";
-            toolStripLabel2.Size = new Size(31, 28);
-            toolStripLabel2.Text = "Ara :";
             // 
             // statusStrip1
             // 
@@ -265,55 +55,123 @@
             statusStrip1.TabIndex = 1;
             statusStrip1.Text = "statusStrip1";
             // 
+            // ımageList1
+            // 
+            ımageList1.ColorDepth = ColorDepth.Depth8Bit;
+            ımageList1.ImageSize = new Size(16, 16);
+            ımageList1.TransparentColor = Color.Transparent;
+            // 
+            // toolStrip1
+            // 
+            toolStrip1.ImageScalingSize = new Size(32, 32);
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripSplitButton1, toolStripSeparator6, toolStripSeparator5, toolStripSeparator3, btnMusteriler, toolStripSeparator1, toolStripSplitButton3, toolStripSeparator2, toolStripSplitButton4, toolStripSeparator4, toolStripSplitButton5 });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(683, 39);
+            toolStrip1.TabIndex = 2;
+            toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripSplitButton1
+            // 
+            toolStripSplitButton1.Name = "toolStripSplitButton1";
+            toolStripSplitButton1.Size = new Size(16, 36);
+            // 
+            // toolStripSeparator6
+            // 
+            toolStripSeparator6.Name = "toolStripSeparator6";
+            toolStripSeparator6.Size = new Size(6, 39);
+            // 
+            // toolStripSeparator5
+            // 
+            toolStripSeparator5.Name = "toolStripSeparator5";
+            toolStripSeparator5.Size = new Size(6, 39);
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 39);
+            // 
+            // btnMusteriler
+            // 
+            btnMusteriler.Image = (Image)resources.GetObject("btnMusteriler.Image");
+            btnMusteriler.ImageTransparentColor = Color.Magenta;
+            btnMusteriler.Name = "btnMusteriler";
+            btnMusteriler.Size = new Size(108, 36);
+            btnMusteriler.Text = "Müşteriler";
+            btnMusteriler.ButtonClick += btnMusteriler_ButtonClick;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 39);
+            // 
+            // toolStripSplitButton3
+            // 
+            toolStripSplitButton3.Image = (Image)resources.GetObject("toolStripSplitButton3.Image");
+            toolStripSplitButton3.ImageTransparentColor = Color.Magenta;
+            toolStripSplitButton3.Name = "toolStripSplitButton3";
+            toolStripSplitButton3.Size = new Size(94, 36);
+            toolStripSplitButton3.Text = "Ürünler";
+            toolStripSplitButton3.ButtonClick += toolStripSplitButton3_ButtonClick;
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 39);
+            // 
+            // toolStripSplitButton4
+            // 
+            toolStripSplitButton4.Image = (Image)resources.GetObject("toolStripSplitButton4.Image");
+            toolStripSplitButton4.ImageTransparentColor = Color.Magenta;
+            toolStripSplitButton4.Name = "toolStripSplitButton4";
+            toolStripSplitButton4.Size = new Size(92, 36);
+            toolStripSplitButton4.Text = "Satışlar";
+            toolStripSplitButton4.ButtonClick += toolStripSplitButton4_ButtonClick;
+            // 
+            // toolStripSeparator4
+            // 
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            toolStripSeparator4.Size = new Size(6, 39);
+            // 
+            // toolStripSplitButton5
+            // 
+            toolStripSplitButton5.Image = (Image)resources.GetObject("toolStripSplitButton5.Image");
+            toolStripSplitButton5.ImageTransparentColor = Color.Magenta;
+            toolStripSplitButton5.Name = "toolStripSplitButton5";
+            toolStripSplitButton5.Size = new Size(107, 36);
+            toolStripSplitButton5.Text = "Ödemeler";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(683, 441);
+            Controls.Add(toolStrip1);
             Controls.Add(statusStrip1);
-            Controls.Add(TabPage);
             Name = "Form1";
             Text = "CAN Hediyelik";
             Load += Form1_Load;
-            TabPage.ResumeLayout(false);
-            Musteriler.ResumeLayout(false);
-            Musteriler.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
-            Urunler.ResumeLayout(false);
-            Urunler.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            toolStrip3.ResumeLayout(false);
-            toolStrip3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private TabControl TabPage;
-        private TabPage Musteriler;
-        private TabPage Urunler;
-        private ToolStrip toolStrip1;
         private ToolStrip toolStrip2;
         private StatusStrip statusStrip1;
-        private ToolStripButton btnMusteriSil;
-        private ToolStripButton btnMusteriEkle;
-        private ToolStripButton btnMusteriDuzenle;
-        private DataGridView dataGridView1;
+        private ImageList ımageList1;
+        private ToolStrip toolStrip1;
+        private ToolStripSplitButton toolStripSplitButton1;
         private ToolStripSeparator toolStripSeparator1;
-        private ToolStripLabel toolStripLabel1;
-        private ToolStripTextBox toolStripTextBox1;
-        private ToolStripButton btnMusteriBul;
-        private DataGridView dataGridView2;
-        private ToolStrip toolStrip3;
-        private ToolStripButton toolStripButton1;
-        private ToolStripButton toolStripButton2;
-        private ToolStripButton toolStripButton3;
+        private ToolStripSplitButton btnMusteriler;
+        private ToolStripSplitButton toolStripSplitButton3;
+        private ToolStripSplitButton toolStripSplitButton4;
+        private ToolStripSplitButton toolStripSplitButton5;
+        private ToolStripSeparator toolStripSeparator6;
+        private ToolStripSeparator toolStripSeparator5;
+        private ToolStripSeparator toolStripSeparator3;
         private ToolStripSeparator toolStripSeparator2;
-        private ToolStripButton toolStripButton4;
-        private ToolStripTextBox toolStripTextBox2;
-        private ToolStripLabel toolStripLabel2;
+        private ToolStripSeparator toolStripSeparator4;
     }
 }
